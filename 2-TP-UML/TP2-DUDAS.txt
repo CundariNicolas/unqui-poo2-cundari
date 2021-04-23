@@ -1,0 +1,7 @@
+¿Están bien expresadas las relaciones?
+Si un objeto pide a un objeto que se encadena con la petición
+a otro objeto, ¿cómo se expresa en terminos de relaciones UML?
+
+¿Que relación tiene un objeto que guarda una instancia de objeto distinto
+pero que nunca realiza un mensaje a ese objeto directamente? (reciboHaber y Conceptos)
+
