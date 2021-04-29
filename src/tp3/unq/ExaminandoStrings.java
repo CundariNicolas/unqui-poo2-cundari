@@ -1,14 +1,16 @@
 package tp3.unq;
 
 public class ExaminandoStrings {
-
+	
+	
+	 
 	
 
 	public static void main(String[] args) {
 		 String a = "abc";
 		 String s = a;
 		 String t;
-		 
+		
 		System.out.println(s.length()); 
 		// Retorna 3
 		
@@ -35,8 +37,14 @@ public class ExaminandoStrings {
 		 // Retorna true
 		 System.out.println(a.substring(1,3).equals("bc"));
 		 // Retorna true
+		 
+		
+		 
+		
+		 
 		
 
 	}
 
 }
+
