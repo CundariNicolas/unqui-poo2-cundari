@@ -30,6 +30,11 @@ public class Caja {
 		totalAPagar = 0;
 		
 	}
+	public void pagarFactura(Factura x, Agencia agencia) {
+		totalAPagar = totalAPagar + x.montoAPagar();
+		agencia.registrarPago(x);
+		
+	}
 	
 
 }

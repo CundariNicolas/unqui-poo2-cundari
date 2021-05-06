@@ -56,7 +56,8 @@ class CajaTestCase {
 	void testFaltaStock() {
 		caja1.registrarProducto(leche);
 		caja1.registrarProducto(leche);
-		ArithmeticException thrown = assertThrows(ArithmeticException.class, () -> caja1.registrarProducto(leche), "No hay stock");
+		ArithmeticException thrown = assertThrows(ArithmeticException.class, () -> caja1.registrarProducto(leche),
+				"No se puede registrar un producto mas");
 		assertTrue(thrown.getMessage().contains("No hay stock"));
 		
 	}
