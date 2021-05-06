@@ -1,0 +1,11 @@
+Respuestas TP4 Interfaces y clases abstractas.
+
+Actividad de lectura:
+1- Las ventajas que brindan las interfaces es poder heredar solamente protocolo. También el tipado de los objetos se vuelve algo relativo
+	dependiendo del punto de vista de cada objeto.
+2- Porque a veces queremos solamente heredar protocolo. Para no heredar atributos que no necesita esa clase en particular que lo hereda.
+	Tampoco sobreescribir métodos que no son necesarios para la clase.
+3- Poder heredar atributos y algún comportamiento si es necesario. 
+4- No se puede instanciar una interface porque tiene métodos sin definir.
+5- 
+6- Porque Smalltalk no es un lenguaje tipado. 
