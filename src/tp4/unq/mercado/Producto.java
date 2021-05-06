@@ -2,9 +2,9 @@ package tp4.unq.mercado;
 
 public abstract class Producto {
 	protected int stock;
-	protected float precio;
+	protected double precio;
 	
-	public Producto(int stock, float precio) {
+	public Producto(int stock, double precio) {
 		this.stock = stock;
 		this.precio = precio;
 		
@@ -22,7 +22,7 @@ public abstract class Producto {
 		this.stock = cant;
 	}
 	
-	public abstract float precio();
+	public abstract double precio();
 	
 
 }

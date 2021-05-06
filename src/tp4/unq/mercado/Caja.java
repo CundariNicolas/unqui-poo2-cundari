@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Caja {
 	private ArrayList<Producto> productos;
-	private float totalAPagar;
+	private double totalAPagar;
 	
 	public Caja() {
 		productos = new ArrayList<Producto>();
@@ -12,16 +12,24 @@ public class Caja {
 	}
 	
 	public void registrarProducto(Producto x) {
+		if(x.getStock()>0) {
 		totalAPagar = totalAPagar + x.precio();
 		productos.add(x);
+		x.decrementarStock();
+		}
+		else {
+			throw new ArithmeticException("No hay stock");
+		}
 	}
 	
-	public float totalAPagar() {
-		return totalAPagar;
+	public double totalAPagar() {
+		return Math.round(totalAPagar * 100) / 100d;
 	}
 	public void cobrarTotal() {
 		productos.clear();
 		totalAPagar = 0;
+		
 	}
+	
 
 }

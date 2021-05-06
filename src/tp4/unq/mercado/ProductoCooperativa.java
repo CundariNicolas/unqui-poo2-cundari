@@ -1,12 +1,14 @@
 package tp4.unq.mercado;
 
 public class ProductoCooperativa extends Producto {
-	public ProductoCooperativa(int stock, float precio) {
+	public ProductoCooperativa(int stock, double precio) {
 		super(stock,precio);
 	}
 	
-	public float precio() {
-		return precio - (precio * (10 / 100));
+	public double precio() {
+		double result = precio - (precio * 0.10);
+		result = Math.round(result * 100) / 100d;
+		return result;
 	}
 
 }
