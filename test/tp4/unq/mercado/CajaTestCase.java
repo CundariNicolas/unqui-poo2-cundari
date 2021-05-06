@@ -15,6 +15,11 @@ class CajaTestCase {
 	ProductoCooperativa cereal;
 	ProductoCooperativa arroz;
 	ProductoCooperativa yerba;
+	AgenciaRecaudadora agencia1;
+	Servicio luz;
+	Impuesto barrido;
+	
+	
 	
 	@BeforeEach
 	void setUp() throws Exception {
@@ -26,6 +31,11 @@ class CajaTestCase {
 		cereal = new ProductoCooperativa(20, 43.00);
 		arroz = new ProductoCooperativa(23, 25.00);
 		yerba = new ProductoCooperativa(24, 24.00);
+		/* ---------- Test para agencia --------------- */
+		
+		agencia1 = new AgenciaRecaudadora();
+		luz = new Servicio(20, 200);
+		barrido = new Impuesto(250);
 		
 		
 	}
@@ -59,6 +69,23 @@ class CajaTestCase {
 		ArithmeticException thrown = assertThrows(ArithmeticException.class, () -> caja1.registrarProducto(leche),
 				"No se puede registrar un producto mas");
 		assertTrue(thrown.getMessage().contains("No hay stock"));
+		
+	}
+	@Test
+	void testCobrarServicioEImpuesto() {
+		caja1.pagarFactura(barrido, agencia1);
+		assertEquals(barrido, agencia1.getFacturasPagas().get(0));
+		caja1.pagarFactura(luz, agencia1);
+		assertEquals(luz, agencia1.getFacturasPagas().get(1));
+		
+	}
+	
+	@Test
+	void testMonto() {
+		caja1.pagarFactura(barrido, agencia1);
+		caja1.pagarFactura(luz, agencia1);
+		assertEquals(4250, caja1.totalAPagar());
+		
 		
 	}
 
