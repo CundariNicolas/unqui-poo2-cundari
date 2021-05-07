@@ -9,3 +9,71 @@ Actividad de lectura:
 4- No se puede instanciar una interface porque tiene métodos sin definir.
 5- 
 6- Porque Smalltalk no es un lenguaje tipado. 
+
+
+------------------------------------------------
+Interfaces, colecciones y otras yerbas.
+
+
+List es subinterfaz de Collection
+ArrayList y LinkedList implementan Collection
+
+public class ColeccionadorDeObjetos {
+	public Object getFirstFrom(Collection collection){
+				return collection.get(0);
+			/* De por sí, la interfaz de Collection 
+			no tiene el método get, pero las clases que lo implementan
+			como ArrayList y LinkedList contienen este método.
+			Collection al ser una interfaz no puede ser instanciada,
+			lo que quiere decir que collection es una instancia de 
+			ArrayList o LinkedList, en este caso particular. Así que
+			no habría problema con este método. Simplemente
+			traería el objeto en la posición 0 */
+			
+			
+			
+			}
+			
+			
+	public void addLast(Object element, List collection){
+				collection.add(element);
+				
+			/* LinkedList y ArrayList implementan List, que es 
+			una subinterfaz de Collection. La interfaz List contiene
+			el protocolo .add así que agregaría el elemento al final
+			de la lista sin problemas*/
+			}
+			
+	public Collection getSubCollection(LinkedList collection, int from, int to){
+				return collection.subList(x,y);
+				/* subList es parte del protocolo de la interfaz de List,
+				y LinkedList implementa List, asíque debe estar entre sus métodos.
+				Trae la lista de x hasta y la devuelve como List */
+			}
+			
+			public Boolean containsElement(ArrayList collection, Object element){
+			return collection.contains(element);
+			/* ArrayList implementa List, que es subinterfaz de Collection.
+			En su protocolo está el comportamiento contains. Verifica si contiene el
+			elemento */
+			}
+	}
+				
+				
+				
+				
+-----De Smalltalk a Java: Personas y Mascotas--------
+
+4- Esto lo permite el polimorfismo. Poder enviar un mismo mensaje a distintos
+objetos.
+
+5- Se podría asegurar haciendo que hereden, por ejemplo, de una clase Nombrable.
+Si fuese subclase de alguna clase que no se puede modificar, no podría hacer
+que herede de Nombrable. En java la mejor forma sería que implemente una inferfaz
+Nombrable.
+
+
+
+
+			
+	
