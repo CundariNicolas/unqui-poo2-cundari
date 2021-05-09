@@ -1,4 +1,4 @@
-package openClosedPrinciple.caso1;
+package tp6.unq.caso1;
 
 public class Correo {
 
