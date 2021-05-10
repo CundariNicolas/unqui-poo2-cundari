@@ -10,7 +10,7 @@ public interface IServidor {
 
 	public void enviar(Correo correo);
 	
-	public float tazaDeTransferencia();
+	public float tasaDeTransferencia();
 
 	public void resetear();
 	
