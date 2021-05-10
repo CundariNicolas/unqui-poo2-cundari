@@ -1,1 +1,10 @@
 2. Violaciones del principio SOLID:
+a- Single Responsability: ClienteEmail tiene más de una 
+responsabilidad, como la de gestionar toda la casilla de mensajes,
+sería mucho mejor dividir el cliente en los distintos tipos de comportamientos
+b- Opened-Closed Principle: 
+c- Liskov's sustitution principle: no hay subclases, lo que parece ser
+también un error de diseño.
+d- interface segregation: IServidor tiene protocolos que no son
+aplicables por todos los servidores, como la clase servidorPop tiene
+protocolo que no corresponde a su clase
