@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ServidorPop implements IServidor {
 
-	public List<Correo> recibirNuevos(String user, String pass) {
+	public List<Correo> recibirNuevos(Usuario usuario) {
 		List<Correo> retorno = new ArrayList<Correo>();
 	  //Verificar autenticidad de usuario.
 		//obtener emails Nuevos del usuario.
@@ -13,7 +13,7 @@ public class ServidorPop implements IServidor {
 		return retorno;
 	}
 
-	public void conectar(String nombreUsuario, String passusuario) {
+	public void conectar(Usuario usuario) {
 	   //Verifica que el usuario sea valido y establece la conexion.
 		
 	}
@@ -22,22 +22,6 @@ public class ServidorPop implements IServidor {
       //realiza lo necesario para enviar el correo.		
 	}
 
-	@Override
-	public float tazaDeTransferencia() {
-		//no corresponde
-		return 0;
-	}
-
-	@Override
-	public void resetear() {
-         //no corresponde		
-	}
-
-	@Override
-	public void realizarBackUp() {
-		//no corresponde
-		
-	}
 
 
 
