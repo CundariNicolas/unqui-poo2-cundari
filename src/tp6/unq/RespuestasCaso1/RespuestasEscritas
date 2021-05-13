@@ -13,4 +13,6 @@ d- 	interface segregation: IServidor tiene protocolos que no son
 	
 3-	Soluciones: crear una nueva interfaz para otro tipo de servidor al que le corresponda el protocolo de IServidor que no le corresponde. 
 	que ClienteEmail pueda ser instanciado con cualquier tipo de Servidor lo haría escalable y que debamos cambiar lo menos posible el código.
+	Crear una casilla para que se encargue de los correos que ya fueron obtenidos. Crear una clase de tipo Usuario para que sea más entendible
+	el código, que sea responsable de sí mismo y no lo haga ClienteEmail.
 	
