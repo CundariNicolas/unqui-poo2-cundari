@@ -1,0 +1,13 @@
+Banco y préstamos.
+2-Decisiones:
+En mi diseño implementé la interfaz Cliente para poder
+agregar a futuro otros tipos de cliente. El punto negativo
+es que el protocolo edad debería ser implementado por cualquier
+tipo de Cliente pero lo pensé de esta manera para poder agregar
+Clientes del estilo "VIP" del banco. Solicitud de Crédito es
+una clase abstracta a la que se puede sumar cualquier tipo de
+Solicitud de crédito, sea cual sea sus requisitos. El tipo Inmueble
+al que se hace referencia en la solicitud de crédito hipotecario
+lo implementé como una interfaz para poder agregar distintos tipos
+de Inmueble en el futuro. Sólo está implementado el tipo de 
+Inmueble que es una propiedad. 
