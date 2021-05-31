@@ -8,7 +8,7 @@ public class PokerStatus {
 		
 	}
 
-	public String verificar(String carta1, String carta2, String carta3, String carta4, String carta5) {
+	public String verificar(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
 		// TODO Auto-generated method stub
 		String jugada = "Nada";
 		
@@ -28,10 +28,10 @@ public class PokerStatus {
 		return jugada;
 	}
 	
-	public int buscarMismoPalo(String carta1, String carta2, String carta3, String carta4, String carta5) {
+	public int buscarMismoPalo(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
 		int resultado = 0;
 		int cantActual = 0;
-		ArrayList <String> cartas = new ArrayList<String>();
+		ArrayList <Carta> cartas = new ArrayList<Carta>();
 		cartas.add(carta1);
 		cartas.add(carta2);
 		cartas.add(carta3);
@@ -40,14 +40,10 @@ public class PokerStatus {
 		
 		ArrayList<String> valores = new ArrayList<String>();
 		
-		for(String carta : cartas) {
-			if(carta.length()>2) {
-			valores.add(carta.substring(2));
-			}
-			else {
-				valores.add(carta.substring(1));
-			}
+		for(Carta carta : cartas) {
 			
+			valores.add(carta.getPalo());
+		}
 			
 		for(int i = 0; i < valores.size() ; i++) {
 			for(int j = 0; j < valores.size(); j++) {
@@ -61,32 +57,28 @@ public class PokerStatus {
 			
 		
 		
-		
-	}
 		return resultado;
 	}
+		
+	
 
 
-	public int buscarMismosValores(String carta1, String carta2, String carta3, String carta4, String carta5) {
+	public int buscarMismosValores(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
 		int resultado = 0;
 		int cantActual = 0;
-		ArrayList <String> cartas = new ArrayList<String>();
+		ArrayList <Carta> cartas = new ArrayList<Carta>();
 		cartas.add(carta1);
 		cartas.add(carta2);
 		cartas.add(carta3);
 		cartas.add(carta4);
 		cartas.add(carta5);
 		
-		ArrayList<String> valores = new ArrayList<String>();
+		ArrayList<Integer> valores = new ArrayList<Integer>();
 		
-		for(String carta : cartas) {
-			if(carta.length()>2) {
-			valores.add(carta.substring(0, 2));
-			}
-			else {
-				valores.add(carta.substring(0, 1));
-			}
-			
+		for(Carta carta : cartas) {
+			valores.add(carta.getValor());
+		}
+	
 			
 		for(int i = 0; i < valores.size() ; i++) {
 			for(int j = 0; j < valores.size(); j++) {
@@ -101,9 +93,21 @@ public class PokerStatus {
 		
 		
 		
-	}
+	
 		return resultado;
 	
 }
+
+	public boolean esMayorQue(Carta carta1, Carta carta5) {
+		// TODO Auto-generated method stub
+		return carta1.getValor() > carta5.getValor();
+	}
+
+	public boolean esMismoPalo(Carta carta1, Carta carta2) {
+		// TODO Auto-generated method stub
+		return carta1.getPalo().equals(carta2.getPalo());
+	}
+
+
 	
 }
