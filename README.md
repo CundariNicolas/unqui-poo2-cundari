@@ -1,3 +1,3 @@
-# Trabajos prácticos de Programación con Objetos II, Universidad Nacional de Quilmes
+# Trabajos prácticos de Programación con Objetos II de Universidad Nacional de Quilmes
 
 - Nicolás Cundari
