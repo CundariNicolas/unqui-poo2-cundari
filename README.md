@@ -1,1 +1,3 @@
-# unqui-poo2-cundari
+# Trabajos prácticos de Programación con Objetos II, Universidad Nacional de Quilmes
+
+- Nicolás Cundari
