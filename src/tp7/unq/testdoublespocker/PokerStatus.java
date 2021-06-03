@@ -9,7 +9,7 @@ public class PokerStatus {
 	}
 
 	public String verificar(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
-		// TODO Auto-generated method stub
+		
 		String jugada = "Nada";
 		
 		if(this.buscarMismoPalo(carta1, carta2, carta3, carta4, carta5) == 5) {
@@ -99,12 +99,12 @@ public class PokerStatus {
 }
 
 	public boolean esMayorQue(Carta carta1, Carta carta5) {
-		// TODO Auto-generated method stub
+		
 		return carta1.getValor() > carta5.getValor();
 	}
 
 	public boolean esMismoPalo(Carta carta1, Carta carta2) {
-		// TODO Auto-generated method stub
+		
 		return carta1.getPalo().equals(carta2.getPalo());
 	}
 
