@@ -1,113 +1,65 @@
 package tp7.unq.testdoublespocker;
 
-import java.util.ArrayList;
-
 public class PokerStatus {
-	
-	public PokerStatus() {
+
+
+
+	public TipoJugada verificar(Jugada jugada1) {
+		
+		return jugada1.getTipoJugada(jugada1);
+	}
+
+	public boolean cartaEsMayorQue(Carta carta1, Carta carta2) {
+		return carta1.getValor().ordinal() > carta2.getValor().ordinal();
 		
 	}
 
-	public String verificar(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
+	public boolean sonMismoPalo(Carta carta1, Carta carta2) {
 		
-		String jugada = "Nada";
-		
-		if(this.buscarMismoPalo(carta1, carta2, carta3, carta4, carta5) == 5) {
-			jugada = "Color";
-		}
-		else if(this.buscarMismosValores(carta1, carta2, carta3, carta4, carta5) == 3) {
-			jugada = "Trio";
-		}
-		else if(this.buscarMismosValores(carta1, carta2, carta3, carta4, carta5) >= 4) {
-			jugada = "Poker";
-		}
-		
-		
-		
-		
-		return jugada;
-	}
-	
-	public int buscarMismoPalo(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
-		int resultado = 0;
-		int cantActual = 0;
-		ArrayList <Carta> cartas = new ArrayList<Carta>();
-		cartas.add(carta1);
-		cartas.add(carta2);
-		cartas.add(carta3);
-		cartas.add(carta4);
-		cartas.add(carta5);
-		
-		ArrayList<String> valores = new ArrayList<String>();
-		
-		for(Carta carta : cartas) {
-			
-			valores.add(carta.getPalo());
-		}
-			
-		for(int i = 0; i < valores.size() ; i++) {
-			for(int j = 0; j < valores.size(); j++) {
-				if (valores.get(i).equals(valores.get(j))) {
-					cantActual++;
-				}
-			}
-			resultado = Math.max(cantActual, resultado);
-			cantActual = 0;
-		}
-			
-		
-		
-		return resultado;
-	}
-		
-	
-
-
-	public int buscarMismosValores(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
-		int resultado = 0;
-		int cantActual = 0;
-		ArrayList <Carta> cartas = new ArrayList<Carta>();
-		cartas.add(carta1);
-		cartas.add(carta2);
-		cartas.add(carta3);
-		cartas.add(carta4);
-		cartas.add(carta5);
-		
-		ArrayList<Integer> valores = new ArrayList<Integer>();
-		
-		for(Carta carta : cartas) {
-			valores.add(carta.getValor());
-		}
-	
-			
-		for(int i = 0; i < valores.size() ; i++) {
-			for(int j = 0; j < valores.size(); j++) {
-				if (valores.get(i).equals(valores.get(j))) {
-					cantActual++;
-				}
-			}
-			resultado = Math.max(cantActual, resultado);
-			cantActual = 0;
-		}
-			
-		
-		
-		
-	
-		return resultado;
-	
-}
-
-	public boolean esMayorQue(Carta carta1, Carta carta5) {
-		
-		return carta1.getValor() > carta5.getValor();
+		return carta1.getPalo() == carta2.getPalo();
 	}
 
-	public boolean esMismoPalo(Carta carta1, Carta carta2) {
+	public Jugada jugadaGanadoraEntre(Jugada jugada1, Jugada jugada2) {
+		if(this.verificar(jugada1).ordinal() == this.verificar(jugada2).ordinal()) {
+			
+			return this.traerGanadorPorCartaMasAlta(jugada1, jugada2);
+			
+		} else {
+			
+		if(this.verificar(jugada1).ordinal() > this.verificar(jugada2).ordinal()) {
+			return jugada1;}
+		else { return jugada2; }
 		
-		return carta1.getPalo().equals(carta2.getPalo());
+	}
 	}
 
+	private Jugada traerGanadorPorCartaMasAlta(Jugada jugada1, Jugada jugada2) {
+		if(this.verificar(jugada1) == TipoJugada.COLOR) {
+		 return this.ganadorDeJugadaPorPalo(jugada1, jugada2);
+		}
+		else {
+		return this.ganadorDeJugadaPorValor(jugada1,jugada2);
+		}
+		
+	}
 
-	
+	private Jugada ganadorDeJugadaPorValor(Jugada jugada1, Jugada jugada2) {
+		if (jugada1.valorDeCartasDeJugadaMismoValor().ordinal() > jugada2.valorDeCartasDeJugadaMismoValor().ordinal()) {
+			return jugada1;
+		}
+		else {
+			return jugada2;
+		}
+	}
+
+	private Jugada ganadorDeJugadaPorPalo(Jugada jugada1, Jugada jugada2) {
+		if (jugada1.valorDeCartaJugadaMismoPalo().ordinal() > jugada2.valorDeCartaJugadaMismoPalo().ordinal()) {
+			return jugada1;
+		}
+		else {
+			return jugada2;
+		}
+		
+	}
+
 }

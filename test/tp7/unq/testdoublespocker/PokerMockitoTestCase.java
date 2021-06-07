@@ -59,6 +59,13 @@ class PokerMockitoTestCase {
 	Carta carta3;
 	Carta carta4;
 	Carta carta5;
+	Carta carta6;
+	Carta carta7;
+	Carta carta8;
+	Carta carta9;
+	Carta carta10;
+	Jugada jugada1;
+	Jugada jugada2;
 			
 	@BeforeEach
 	void setUp() throws Exception {
@@ -67,113 +74,124 @@ class PokerMockitoTestCase {
 		carta3 = mock(Carta.class);
 		carta4 = mock(Carta.class);
 		carta5 = mock(Carta.class);
+		carta6 = mock(Carta.class);
+		carta7 = mock(Carta.class);
+		carta8 = mock(Carta.class);
+		carta9 = mock(Carta.class);
+		carta10 = mock(Carta.class);
+		jugada1 = new Jugada(carta1, carta2, carta3, carta4, carta5);
+		jugada2 = new Jugada(carta6, carta7, carta8, carta9, carta10);
+		
 	}
 
 	@Test
-	void testPoker() {
+	void testNada() {
+		when(carta1.getValor()).thenReturn(ValorCarta.DIEZ);
+		when(carta2.getValor()).thenReturn(ValorCarta.DIEZ);
+		when(carta3.getValor()).thenReturn(ValorCarta.TRES);
+		when(carta4.getValor()).thenReturn(ValorCarta.DOS);
+		when(carta5.getValor()).thenReturn(ValorCarta.DOS);
+		when(carta1.getPalo()).thenReturn(PaloCarta.D);
+		when(carta4.getPalo()).thenReturn(PaloCarta.P);
 		
-		
-		when(carta1.getValor()).thenReturn(5);
-		when(carta2.getValor()).thenReturn(5);
-		when(carta3.getValor()).thenReturn(5);
-		when(carta4.getValor()).thenReturn(5);
-		when(carta5.getValor()).thenReturn(10);
-		when(carta1.getPalo()).thenReturn("D");
-		when(carta2.getPalo()).thenReturn("C");
-		when(carta3.getPalo()).thenReturn("D");
-		when(carta4.getPalo()).thenReturn("T");
-		when(carta5.getPalo()).thenReturn("D");
-		
-		assertEquals("Poker", poker.verificar(carta1, carta2, carta3, carta4, carta5));
-		
+	assertEquals(TipoJugada.NADA, poker.verificar(jugada1));	
 	}
 	
 	@Test void testTrio() {
-		when(carta1.getValor()).thenReturn(3);
-		when(carta2.getValor()).thenReturn(3);
-		when(carta3.getValor()).thenReturn(3);
-		when(carta4.getValor()).thenReturn(5);
-		when(carta5.getValor()).thenReturn(10);
-		when(carta1.getPalo()).thenReturn("D");
-		when(carta2.getPalo()).thenReturn("C");
-		when(carta3.getPalo()).thenReturn("D");
-		when(carta4.getPalo()).thenReturn("T");
-		when(carta5.getPalo()).thenReturn("D");
+	when(carta1.getValor()).thenReturn(ValorCarta.DIEZ);
+	when(carta2.getValor()).thenReturn(ValorCarta.DIEZ);
+	when(carta3.getValor()).thenReturn(ValorCarta.DIEZ);
+	when(carta4.getValor()).thenReturn(ValorCarta.DOS);
+	when(carta5.getValor()).thenReturn(ValorCarta.DOS);
+	when(carta1.getPalo()).thenReturn(PaloCarta.T);
+	when(carta2.getPalo()).thenReturn(PaloCarta.D);
+	assertEquals(TipoJugada.TRIO, poker.verificar(jugada1));
 		
-		assertEquals("Trio", poker.verificar(carta1, carta2, carta3, carta4, carta5));
 		
 	}
 	
 	@Test 
-	void testNada() {
-		when(carta1.getValor()).thenReturn(3);
-		when(carta2.getValor()).thenReturn(4);
-		when(carta3.getValor()).thenReturn(5);
-		when(carta4.getValor()).thenReturn(6);
-		when(carta5.getValor()).thenReturn(10);
-		when(carta1.getPalo()).thenReturn("D");
-		when(carta2.getPalo()).thenReturn("C");
-		when(carta3.getPalo()).thenReturn("P");
-		when(carta4.getPalo()).thenReturn("T");
-		when(carta5.getPalo()).thenReturn("D");
-		
-		assertEquals("Nada", poker.verificar(carta1, carta2, carta3, carta4, carta5));
+	void testPoker() {
+		when(carta1.getValor()).thenReturn(ValorCarta.DIEZ);
+		when(carta2.getValor()).thenReturn(ValorCarta.DIEZ);
+		when(carta3.getValor()).thenReturn(ValorCarta.DIEZ);
+		when(carta4.getValor()).thenReturn(ValorCarta.DOS);
+		when(carta5.getValor()).thenReturn(ValorCarta.DIEZ);
+		assertEquals(TipoJugada.POKER, poker.verificar(jugada1));
 	}
 	
 	@Test
 	void testColor() {
-		when(carta1.getValor()).thenReturn(3);
-		when(carta2.getValor()).thenReturn(4);
-		when(carta3.getValor()).thenReturn(5);
-		when(carta4.getValor()).thenReturn(6);
-		when(carta5.getValor()).thenReturn(10);
-		when(carta1.getPalo()).thenReturn("T");
-		when(carta2.getPalo()).thenReturn("T");
-		when(carta3.getPalo()).thenReturn("T");
-		when(carta4.getPalo()).thenReturn("T");
-		when(carta5.getPalo()).thenReturn("T");
-		
-		assertEquals("Color", poker.verificar(carta1, carta2, carta3, carta4, carta5));
+		when(carta1.getPalo()).thenReturn(PaloCarta.D);
+		when(carta2.getPalo()).thenReturn(PaloCarta.D);
+		when(carta3.getPalo()).thenReturn(PaloCarta.D);
+		when(carta4.getPalo()).thenReturn(PaloCarta.D);
+		when(carta5.getPalo()).thenReturn(PaloCarta.D);
+		assertEquals(TipoJugada.COLOR, poker.verificar(jugada1));
 		
 	}
 	
 	@Test
 	void testCartaMayor() {
-		when(carta1.getValor()).thenReturn(5);
-		when(carta2.getValor()).thenReturn(4);
-		when(carta3.getValor()).thenReturn(1);
-		when(carta4.getValor()).thenReturn(6);
-		
-		assertTrue(poker.esMayorQue(carta1, carta2));
-		assertFalse(poker.esMayorQue(carta3, carta4));
+		when(carta1.getValor()).thenReturn(ValorCarta.A);
+		when(carta2.getValor()).thenReturn(ValorCarta.Q);
+		assertTrue(poker.cartaEsMayorQue(carta1, carta2));
 	}
 	
 	@Test
 	void testEsMismoPalo() {
-		when(carta1.getPalo()).thenReturn("T");
-		when(carta2.getPalo()).thenReturn("D");
-		when(carta3.getPalo()).thenReturn("D");
-		
-		
-		
-		assertFalse(poker.esMismoPalo(carta1, carta2));
-		assertTrue(poker.esMismoPalo(carta2, carta3));
+		when(carta1.getPalo()).thenReturn(PaloCarta.D);
+		when(carta2.getPalo()).thenReturn(PaloCarta.D);
+		assertTrue(poker.sonMismoPalo(carta1, carta2));
 	}
 	
+	
 	@Test
-	void testBuscarMismosValores() {
-		when(carta1.getValor()).thenReturn(1);
-		when(carta2.getValor()).thenReturn(1);
-		when(carta3.getValor()).thenReturn(1);
-		when(carta4.getValor()).thenReturn(1);
-		when(carta5.getValor()).thenReturn(10);
-		when(carta1.getPalo()).thenReturn("T");
-		when(carta2.getPalo()).thenReturn("T");
-		when(carta3.getPalo()).thenReturn("T");
-		when(carta4.getPalo()).thenReturn("T");
-		when(carta5.getPalo()).thenReturn("T");
-		//EXERCISE Y VERIFY
-		assertEquals(4, poker.buscarMismosValores(carta1, carta2, carta3, carta4, carta5));
+	void testJugadaGanadora() {
+		when(carta1.getValor()).thenReturn(ValorCarta.DIEZ);
+		when(carta2.getValor()).thenReturn(ValorCarta.DIEZ);
+		when(carta3.getValor()).thenReturn(ValorCarta.DIEZ);
+		when(carta4.getValor()).thenReturn(ValorCarta.DIEZ);
+		when(carta5.getValor()).thenReturn(ValorCarta.DOS);
+		when(carta1.getPalo()).thenReturn(PaloCarta.T);
+		when(carta2.getPalo()).thenReturn(PaloCarta.D);
+		
+		
+		when(carta6.getPalo()).thenReturn(PaloCarta.D);
+		when(carta7.getPalo()).thenReturn(PaloCarta.D);
+		when(carta8.getPalo()).thenReturn(PaloCarta.D);
+		when(carta9.getPalo()).thenReturn(PaloCarta.D);
+		when(carta10.getPalo()).thenReturn(PaloCarta.D);
+		when(carta10.getValor()).thenReturn(ValorCarta.DIEZ);
+		when(carta9.getValor()).thenReturn(ValorCarta.DOS);
+		when(carta7.getValor()).thenReturn(ValorCarta.TRES);
+		when(carta8.getValor()).thenReturn(ValorCarta.OCHO);
+		
+		assertEquals(jugada1, poker.jugadaGanadoraEntre(jugada1, jugada2));
 	}
 
+
+@Test
+void testJugadaGanadoraDeMismaJugada() {
+	when(carta1.getValor()).thenReturn(ValorCarta.A);
+	when(carta2.getValor()).thenReturn(ValorCarta.A);
+	when(carta3.getValor()).thenReturn(ValorCarta.A);
+	when(carta4.getValor()).thenReturn(ValorCarta.A);
+	when(carta5.getValor()).thenReturn(ValorCarta.DOS);
+	when(carta1.getPalo()).thenReturn(PaloCarta.T);
+	when(carta2.getPalo()).thenReturn(PaloCarta.D);
+	
+	when(carta6.getValor()).thenReturn(ValorCarta.J);
+	when(carta7.getValor()).thenReturn(ValorCarta.J);
+	when(carta8.getValor()).thenReturn(ValorCarta.J);
+	when(carta9.getValor()).thenReturn(ValorCarta.J);
+	when(carta10.getValor()).thenReturn(ValorCarta.DOS);
+	when(carta6.getPalo()).thenReturn(PaloCarta.T);
+	when(carta7.getPalo()).thenReturn(PaloCarta.D);
+	
+	
+	
+	
+	assertEquals(jugada1, poker.jugadaGanadoraEntre(jugada1, jugada2));
+}
 }
