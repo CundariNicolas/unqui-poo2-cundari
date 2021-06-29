@@ -1,0 +1,47 @@
+1- Respuestas:
+
+-----Observador Simple--------
+
+ Ventajas Observador Simple: Las responsabilidades están mejor asignadas
+ a través del patrón observador. La clase que está siendo observada 
+ puede funcionar para muchos contextos diferentes. Se puede tener múltiples observadores
+ observando el sensor. Puede ser ventajoso en situaciones en las que 
+ requieras muchos observadores que observen la misma cualidad de un objeto.
+  Pero esto puede atentar contra el posible
+ crecimiento del sistema y de la cantidad de observadores de un objeto.
+ El diseño escala y se vuelve más flexible.
+ Cada observador toma su propia responsabilidad de averiguar los cambios
+ de un objeto. Al ser el objeto que esta siendo observado el que 
+ avisa a sus observadores los cambios que surgen, se elimina en cierto
+ grado el problema del pooling
+ 
+ 
+ Desventajas del Observador Simple: No sabés cuál es el elemento que cambió,
+ lo que significa que si a algún observador le interesa un cambio en particular
+ del objeto observado, tiene que revisar si existe un cambio. Esto produce
+ que en caso de que no haya cambios en el objeto se produjo un intercambio
+ de mensajes innecesario. De esta forma el objeto puede ser bombardeado
+ por mensajes innecesarios y se verá forzado a responder a todas estas
+ peticiones. Esto sucedería si se agregara más funcionalidad al sensor y 
+ eventualmente habría distintos tipos de observador para funciones distintas.
+  Tampoco la clase que observa al sensor no es capaz de observar
+ varios sensores distintos.
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Anotaciones:
+ 
+ Dependencias: Se utilizan cuando no se sabe los objetos
+ interesados en los cambios de un objeto
+ Brinda flexibilidad, no importa el protocolo de los objetos
+ que observan y se pueden comunicar de igual manera.
+ Se utiliza mucho en los diseños de arquitectura por capas
