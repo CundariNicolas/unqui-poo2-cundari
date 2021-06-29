@@ -27,6 +27,41 @@
   Tampoco la clase que observa al sensor no es capaz de observar
  varios sensores distintos.
 
+
+
+-------------- Observador Complejo --------------------
+
+Ventajas: Se solucionan muchas desventajas del observador simple.
+Cada objeto que está observando algún cambio que le interesa en particular,
+puede verificar si el objeto observado cambió ese aspecto y preguntar para 
+actualizarse sólo si el aspecto que le interesa cambió. Eso elimina
+que se manden mensajes innecesariamente. Incrementa aún más la flexibilidad.
+
+Desventaja: Aún la desventaja puede ser que ante cualquier cambio, el objeto
+observado dispara una gran cantidad de mensajes a sus observadores ante cualquier cambio
+sin discriminación del aspecto que cambia. A su vez,
+su muchos observadores están interesados en el mismo atributo, provocaría
+aún así un tráfico grande mensajes hacía el objeto. Está ligada la responsabilidad
+de conocer a todos sus observadores, sin importar qué aspecto en particular
+les interesa del objeto.
+
+----------------Observador con Listeners-----------------
+
+Ventajas: Se soluciona del Observador Complejo las desventajas en la que
+los objetos reciben sin importar el cambio que haya en el objeto.
+Se agrega el rol de Listener, que se encarga de dividir los distintos
+aspectos del objeto observado. También de esta forma se divide los 
+observadores según su interés. Esto hace que muchos mensajes no sean
+envíados innecesariamente. Además, en el cambio que hubo, al ser notificado,
+el cambio en el objeto es envíado en el mensaje y además, avisa en particular
+cual es el valor nuevo en ese aspecto. Esto elimina que los objetos interesados
+no vuelvan a preguntar para actualizarse.
+
+Desventaja: 
+
+
+
+
  
  
  
