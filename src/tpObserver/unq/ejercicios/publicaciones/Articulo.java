@@ -27,7 +27,7 @@ public class Articulo {
 
 
 	public String getTitulo() {
-		return titulo;
+		return titulo; 
 	}
 
 
