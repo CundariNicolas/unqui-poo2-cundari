@@ -69,7 +69,7 @@ class PublicacionesTestCase {
 	}
 
 	@Test
-	void test() {
+	void test() { 
 		publicaciones.cargarArticulo(articulo1);
 		
 		verify(correo, times(1)).notificar("Nuevo articulo");
