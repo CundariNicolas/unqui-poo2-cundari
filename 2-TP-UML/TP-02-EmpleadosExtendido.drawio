@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-22T20:17:52.596Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36 Edg/90.0.818.42" etag="lvCc-3tPtstHiXpAKuNn" version="14.6.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-30T00:39:36.008Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36 Edg/91.0.864.59" etag="IF1xbDfaKr29Cnd3ay8T" version="14.8.2" type="github">
   <diagram id="pSwMAhYl6BQPn0MG4o8G" name="Page-1">
     <mxGraphModel dx="2249" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -121,7 +121,7 @@
             <mxPoint x="518.179211469534" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8JBp-CPKYnFsB_dmWDKy-30" value="Empleado - ReciboHaber" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;" parent="1" source="8JBp-CPKYnFsB_dmWDKy-2" target="8JBp-CPKYnFsB_dmWDKy-8" edge="1">
+        <mxCell id="8JBp-CPKYnFsB_dmWDKy-30" value="empleado" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;" parent="1" source="8JBp-CPKYnFsB_dmWDKy-2" target="8JBp-CPKYnFsB_dmWDKy-8" edge="1">
           <mxGeometry x="0.1111" y="-20" relative="1" as="geometry">
             <mxPoint x="570" y="410" as="sourcePoint" />
             <mxPoint x="200" y="260" as="targetPoint" />
@@ -129,9 +129,9 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8JBp-CPKYnFsB_dmWDKy-31" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="8JBp-CPKYnFsB_dmWDKy-30" connectable="0" vertex="1">
+        <mxCell id="8JBp-CPKYnFsB_dmWDKy-31" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="8JBp-CPKYnFsB_dmWDKy-30" connectable="0" vertex="1">
           <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="-24" y="18" as="offset" />
+            <mxPoint x="-34" y="121" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="8JBp-CPKYnFsB_dmWDKy-36" value="ReciboHaber" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
@@ -162,7 +162,7 @@
           <mxGeometry y="200" width="270" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8JBp-CPKYnFsB_dmWDKy-45" value="Conceptos" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-140" y="990" width="210" height="126" as="geometry" />
+          <mxGeometry x="-130" y="890" width="210" height="126" as="geometry" />
         </mxCell>
         <mxCell id="8JBp-CPKYnFsB_dmWDKy-46" value="- conformacionSueldoBruto: String&#xa;- conformacionRetenciones: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="8JBp-CPKYnFsB_dmWDKy-45" vertex="1">
           <mxGeometry y="26" width="210" height="54" as="geometry" />
@@ -173,37 +173,34 @@
         <mxCell id="8JBp-CPKYnFsB_dmWDKy-59" value="+ new(String, String)" style="text;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;glass=0;labelBackgroundColor=none;sketch=0;html=0;fontStyle=4" parent="8JBp-CPKYnFsB_dmWDKy-45" vertex="1">
           <mxGeometry y="100" width="210" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="8JBp-CPKYnFsB_dmWDKy-51" value="ReciboHaber" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;" parent="1" source="8JBp-CPKYnFsB_dmWDKy-8" target="8JBp-CPKYnFsB_dmWDKy-36" edge="1">
+        <mxCell id="8JBp-CPKYnFsB_dmWDKy-51" value="ReciboHaber" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;" parent="1" source="8JBp-CPKYnFsB_dmWDKy-2" target="8JBp-CPKYnFsB_dmWDKy-36" edge="1">
           <mxGeometry x="0.1111" y="-10" relative="1" as="geometry">
-            <mxPoint x="1160" y="381" as="sourcePoint" />
+            <mxPoint x="330" y="70" as="sourcePoint" />
             <mxPoint x="940" y="342" as="targetPoint" />
             <mxPoint x="-10" y="10" as="offset" />
             <Array as="points">
-              <mxPoint x="220" y="640" />
-              <mxPoint x="220" y="570" />
-              <mxPoint x="180" y="570" />
-              <mxPoint x="180" y="500" />
+              <mxPoint x="-5" y="180" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="8JBp-CPKYnFsB_dmWDKy-52" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="8JBp-CPKYnFsB_dmWDKy-51" connectable="0" vertex="1">
           <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="-320" y="320" as="offset" />
+            <mxPoint x="-324" y="693" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RDeD-cK6elw_4LJPPlSX-1" value="EmpleadoContratado" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="RDeD-cK6elw_4LJPPlSX-1" value="EmpleadoContratado" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="720" y="940" width="290" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="RDeD-cK6elw_4LJPPlSX-2" value="- numeroDeContrato: int&#xa;- medioDePago: String&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="RDeD-cK6elw_4LJPPlSX-1">
+        <mxCell id="RDeD-cK6elw_4LJPPlSX-2" value="- numeroDeContrato: int&#xa;- medioDePago: String&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RDeD-cK6elw_4LJPPlSX-1" vertex="1">
           <mxGeometry y="26" width="290" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="RDeD-cK6elw_4LJPPlSX-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="RDeD-cK6elw_4LJPPlSX-1">
+        <mxCell id="RDeD-cK6elw_4LJPPlSX-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="RDeD-cK6elw_4LJPPlSX-1" vertex="1">
           <mxGeometry y="80" width="290" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="RDeD-cK6elw_4LJPPlSX-4" value="+new (String, String, boolean, Date, int, int, String)&#xa;+ sueldoBruto(): int&#xa;+ sueldoNeto(): int&#xa;+ retenciones(): int&#xa;+ crearReciboHaberes(): ReciboHaber&#xa;+ crearConceptos():Conceptos" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="RDeD-cK6elw_4LJPPlSX-1">
+        <mxCell id="RDeD-cK6elw_4LJPPlSX-4" value="+new (String, String, boolean, Date, int, int, String)&#xa;+ sueldoBruto(): int&#xa;+ sueldoNeto(): int&#xa;+ retenciones(): int&#xa;+ crearReciboHaberes(): ReciboHaber&#xa;+ crearConceptos():Conceptos" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" parent="RDeD-cK6elw_4LJPPlSX-1" vertex="1">
           <mxGeometry y="88" width="290" height="112" as="geometry" />
         </mxCell>
-        <mxCell id="RDeD-cK6elw_4LJPPlSX-5" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;" edge="1" parent="1" source="RDeD-cK6elw_4LJPPlSX-1" target="8JBp-CPKYnFsB_dmWDKy-8">
+        <mxCell id="RDeD-cK6elw_4LJPPlSX-5" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;" parent="1" source="RDeD-cK6elw_4LJPPlSX-1" target="8JBp-CPKYnFsB_dmWDKy-8" edge="1">
           <mxGeometry x="-0.107" width="160" relative="1" as="geometry">
             <mxPoint x="730" y="711.1627906976744" as="sourcePoint" />
             <mxPoint x="550" y="702.5" as="targetPoint" />
@@ -213,19 +210,20 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RDeD-cK6elw_4LJPPlSX-6" value="Conceptos" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;" edge="1" parent="1" source="8JBp-CPKYnFsB_dmWDKy-8" target="8JBp-CPKYnFsB_dmWDKy-45">
-          <mxGeometry x="-0.0646" y="20" relative="1" as="geometry">
+        <mxCell id="RDeD-cK6elw_4LJPPlSX-6" value="conceptos" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;" parent="1" source="8JBp-CPKYnFsB_dmWDKy-36" target="8JBp-CPKYnFsB_dmWDKy-45" edge="1">
+          <mxGeometry y="-45" relative="1" as="geometry">
             <mxPoint x="1020" y="720" as="sourcePoint" />
             <mxPoint x="1190" y="793" as="targetPoint" />
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="-35" y="890" />
+              <mxPoint x="-25" y="730" />
+              <mxPoint x="-25" y="730" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RDeD-cK6elw_4LJPPlSX-7" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="RDeD-cK6elw_4LJPPlSX-6">
+        <mxCell id="RDeD-cK6elw_4LJPPlSX-7" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="RDeD-cK6elw_4LJPPlSX-6" connectable="0" vertex="1">
           <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="-110" y="-403" as="offset" />
+            <mxPoint x="35" y="-272" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
