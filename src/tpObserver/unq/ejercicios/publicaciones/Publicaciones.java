@@ -21,6 +21,9 @@ public class Publicaciones {
 		this.listeners.add(listener);
 	}
 	
+	/** Podria haberlo implementado como lo hice con 
+	 * con encuentros deportivos
+	 */
 	
 	
 	

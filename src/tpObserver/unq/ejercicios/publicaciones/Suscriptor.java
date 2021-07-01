@@ -32,7 +32,7 @@ public class Suscriptor {
 		}
 		
 	}
-
+ 
 
 
 	private boolean cumpleConLosRequisitos(String titulo, ArrayList<String> autores, String filiacion,
