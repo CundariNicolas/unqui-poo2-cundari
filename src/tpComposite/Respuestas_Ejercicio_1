@@ -10,4 +10,4 @@ Ejercicio 1:
 	Otro ejemplo: se pueden componer funciones matemáticas. Las funciones están compuestas por operaciones básicas. Y las funciones
 	pueden estar compuestas de otras funciones. 
 	
-4- El elemento que hace posible esto es el polimorfismo. En particular en POO, la herencia, las clases abstractas y las interfaces.
+4- El elemento que hace posible esto es el polimorfismo. En particular en POO, la herencia, las clases abstractas y las interfaces. 
