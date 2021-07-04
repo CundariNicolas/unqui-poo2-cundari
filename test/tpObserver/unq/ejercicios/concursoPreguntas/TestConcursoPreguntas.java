@@ -25,6 +25,7 @@ class TestConcursoPreguntas {
 	Jugador jugador3;
 	Jugador jugador4;
 	Jugador jugador5;
+	Jugador jugador6;
 	
 	Juego juego1;
 
@@ -46,23 +47,33 @@ class TestConcursoPreguntas {
 		juego1 = new Juego(preguntas);
 		
 		jugador1 = new Jugador("Nicolas");
-		jugador2 = new Jugador("Pepe");
+		jugador2 = mock(Jugador.class);
 		jugador3 = new Jugador("Roberto");
-		jugador4 = new Jugador("Juana");
+		jugador4 = new Jugador("Juana"); 
 		jugador5 = mock(Jugador.class);
+		jugador6 = mock(Jugador.class);
 	}
 
 	@Test
 	void testJuego() {
 		juego1.soliticarParticipacion(jugador1);
 		juego1.soliticarParticipacion(jugador2);
+		
+		verify(jugador2, times(0)).notificarAceptacion(preguntas);
+		
+		juego1.responderPregunta("Hola", pregunta1, jugador1);
+		
+		
 		juego1.soliticarParticipacion(jugador3);
 		juego1.soliticarParticipacion(jugador4);
 		juego1.soliticarParticipacion(jugador5);
 		
-	
+		juego1.responderPregunta("Hola", pregunta1, jugador6);
+		verify(jugador6, times(1)).notificarRespuesta("No estas participando en el juego", "");
 		
+		verify(jugador5, times(1)).notificarAceptacion(preguntas);
 		juego1.responderPregunta("Berlin", pregunta1, jugador5);
+		
 		verify(jugador5, times(1)).notificarRespuesta("Tu respuesta es incorrecta", pregunta1.getPregunta());
 		
 	}

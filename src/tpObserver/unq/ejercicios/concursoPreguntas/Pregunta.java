@@ -11,7 +11,6 @@ public class Pregunta {
 	}
 
 	public boolean esCorrecta(String respuesta) {
-		// TODO Auto-generated method stub
 		return this.respuesta.equals(respuesta) ;
 	}
 	

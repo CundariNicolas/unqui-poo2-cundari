@@ -39,7 +39,8 @@ public class EnJuego extends EstadoJuego {
 			}
 		}
 		else {
-		jugador.notificarRespuesta("No estas participando en el juego", "");	
+		jugador.notificarRespuesta("No estas participando en el juego", "");
+		System.out.println("No estas participando en el juego actual");
 		}
 		
 	}
