@@ -1,0 +1,13 @@
+Ejercicio 1:
+1-  Lo logra a través de la estructura de árbol de la jerarquía de objetos. El objeto principal está compuesto
+	de elementos básicos con los que es polimórfico a través de una clase abstracta que comparten todos los objetos. El objeto que está
+	compuesto por otros elementos básicos delega las tareas a los objetos de los que está compuesto.
+	
+3- En el libro de Gamma muestra ejemplos tales como un objeto abstracto GRAFICO, de los que sus clases concreta que esta compuesta es
+	una imagen. La imagen está compuesta de lineas, rectángulos, texto, y además, puede estar compuesto por sí mismo, o sea, otra imagen.
+	Este patrón puede ser aplicado a cualquier concepto en el que se cumpla la condición de estar compuesto por partes similares o con sus
+	versiones minimalistas de la abstracción de un objeto.
+	Otro ejemplo: se pueden componer funciones matemáticas. Las funciones están compuestas por operaciones básicas. Y las funciones
+	pueden estar compuestas de otras funciones. 
+	
+4- El elemento que hace posible esto es el polimorfismo. En particular en POO, la herencia, las clases abstractas y las interfaces.
