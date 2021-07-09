@@ -1,0 +1,9 @@
+1. En este caso, no tiene impacto, los mensajes que responden son solamente un dato que no varía, y que tampoco modifica el objeto
+en sí, lo que no afecta a otras composiciones.
+
+3. Con el patrón composite se puede crear la clase mixta como una clase recursiva que contiene hojas del tipo de soja y trigo, al hacer la gananciaAnual de cada
+hoja se suman entre todas y dividiendo por la cantidad de subdivisiones de la clase mixta, dando el total de todos los campos según su valor correspondiente.
+
+4. Las operaciones de agregado y borrado de hijos debe ser implementada solamente por la clase mixta
+
+5. la clase mixta cumple el rol de clase compuesta, y la soja y el trigo cumplen el rol de las hojas.
