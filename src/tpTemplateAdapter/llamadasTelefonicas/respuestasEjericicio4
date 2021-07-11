@@ -1,0 +1,16 @@
+1- Identificar los conceptos.
+
+Template Method: 
+La clase abstracta llamada telefonica es la clase padre de
+llamada con descuento. El método que aplica el patrón
+de template method es el de costoFinal() aunque
+no es final
+Dejando decidir a sus subclases cuando es horaPico
+
+Operaciones primitivas: esHoraPico() es una operacion primitiva.
+
+Operaciones concretas: getTiempo(), getHoraDelDia(),
+costoNeto(), costoFinal() aunque tiene un metodo
+que es abstracto en su logica
+
+Hook Methods: no encontre hook methods 
