@@ -1,7 +1,5 @@
 package tpTemplateAdapter.elementosSimilares;
 
-import java.util.stream.Collectors;
-
 public class LinkEnComun extends Filtro{
 
 	@Override
