@@ -1,0 +1,4 @@
+Respuestas:
+2. IShapeShifter cumple el rol de clase abstracta que deben cumplir la clase compuesta y la clase hoja.
+ Tree, es la clase compuesta de otros trees y también de leafs. 
+ Leaf es la clase básica, por las que están compuestas la estructura de tree.

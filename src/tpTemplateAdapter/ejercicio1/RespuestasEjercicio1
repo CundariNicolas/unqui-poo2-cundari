@@ -1,0 +1,13 @@
+2. 	a. Se define el esqueleto de la clase en la clase padre 
+
+	b.El patrón template method deja redefinir a sus subclases
+ 	algunos pasos pero no el esqueleto del algoritmo
+ 
+	c. Solamente algunos comportamientos que son en los que se
+	diferencian las subclases. Algún comportamiento en específico.
+
+	d. Un hook method es un método en el que se pueden colgar las
+	subclases. Se definen en la clase padre sin comportamiento y
+	las subclases eligen si dar comportamiento a ese método o no.
+
+3.	
