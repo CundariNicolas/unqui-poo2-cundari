@@ -1,0 +1,28 @@
+1. Los dos enfoques son:
+	Adaptador de objetos:
+	El adaptador implementa la interfaz de un objeto y conoce al otro.
+	
+	Clase adaptadora: esta implementación hereda interfaces de dos objetos al mismo
+	tiempo. Por lo que en lenguajes que no se puede hacer herencia múltiple no lo soportan.
+	
+	
+	3- No se puede usar la segunda alternativa. No existe herencia multiple.
+	
+	4- La clase vector cumple el rol de adaptador, en particular el método elements(), se 
+	adapta a sí mismo a otra interfaz, como es la de Enumeration, para que cualquier objeto
+	que implemente la interfaz de enumeration pueda operar de la forma que quiera con la clase
+	Vector. La clase que implemente Enumeration tendría el rol de Objetivo, y la clase Vector
+	tiene el rol de ser el adaptado.
+	
+	
+	5- ArrayList cumple el rol de adaptador con su metodo iterator() el cual devuelve un Iterator, y también
+	el de adaptado. Las clases que implementen Iterator son el objetivo.
+	
+	
+	Un ejemplo es:
+	Instanciar un arraylist e instanciar un objeto de una clase que utilice la interfaz Iterator 
+	para alguna funcionalidad. Se puede pasar el arraylist como iterator a alguna de estas clases
+	que usen la clase Iterator
+	
+	
+	
