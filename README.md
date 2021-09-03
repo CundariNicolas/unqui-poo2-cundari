@@ -15,3 +15,4 @@ Descripción de lo visto en la asignatura
 - Singleton
 - Composite
 - State
+- Vistazo general de los patrones de diseño del libro Gamma
